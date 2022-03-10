@@ -1,0 +1,92 @@
+/* CSS RESET */
+body, header, nav, main, footer, a, div, h1, h3, img, ul, figure, figcaption, section, article, aside {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Add box-sizing border-box to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Add default style rules for body and images */
+body {
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Header style */
+header {
+  top: 0;
+}
+
+header img {
+  margin: 0 auto;
+}
+
+/* main */
+main {
+  padding: 2%;
+  font-size: 1.1em
+}
+
+/* article rules */
+article {
+  padding: 2%;
+}
+
+/* Footer */
+footer p {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 0 1em;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+/* mobile class for mobile screns */
+.mobile {
+  display: block;
+}
+
+.tab-desk {
+  display: none;
+}
+
+/* tablet media query */
+@media screen and (min-width: 600px), print {
+  .mobile {
+    display: none;
+  }
+
+  .tab-desk {
+    display: block;
+  }
+}
+
+/* desktop media query */
+@media screen and (min-width: 1000px), print {
+
+}
+
+/* large desktop media query */
+@media screen and (min-width: 1651px) {
+  #container {
+    width: 1650px;
+    margin: 0 auto;
+  }
+}
+
+/* print media query */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
