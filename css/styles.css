@@ -55,6 +55,11 @@ article img {
   margin: 0 auto;
 }
 
+/* Portfolio Page */
+
+
+/* Education Page */
+
 .brief {
   margin: 0 auto;
   padding: 4%;
@@ -103,6 +108,11 @@ footer a {
     display: none;
   }
 
+  .grid2 {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
   .tab-desk {
     display: block;
   }
@@ -115,7 +125,6 @@ footer a {
     display: inline-block;
     float: left;
     width: 20%;
-
   }
 
   .edu-descr {
@@ -136,10 +145,39 @@ footer a {
   .grid {
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-gap: 2%;
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
   }
 
   .brief {
     grid-column: 1 / span 3;
+  }
+
+  .edu-img {
+    display: block;
+    clear: right;
+    width: 100%;
+    height: 430px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+  }
+
+  .edu-img img {
+    max-width: 180px;
+
+  }
+
+  .edu-descr {
+    display: block;
+    clear: left;
+    width: 100%;
+    margin-top: 10px;
   }
 }
 
