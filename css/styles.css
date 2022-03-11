@@ -1,5 +1,11 @@
+/*
+Author: Bo Hendrix Parker
+Date: 03/09/2022
+file: styles.css
+*/
+
 /* CSS RESET */
-body, header, nav, main, footer, a, div, h1, h3, img, ul, figure, figcaption, section, article, aside {
+body, header, nav, main, footer, a, div, h1, h3, p, img, ul, figure, figcaption, section, article, aside {
   margin: 0;
   padding: 0;
   border: 0;
@@ -34,12 +40,40 @@ main {
   font-size: 1.1em
 }
 
+
+
 /* article rules */
 article {
-  padding: 2%;
+  padding: 4%;
+}
+
+article h1 {
+  text-align: center;
+}
+
+article img {
+  margin: 0 auto;
+}
+
+.brief {
+  margin: 0 auto;
+  padding: 4%;
+}
+
+.education-article {
+  margin: 0 auto;
+  padding: 4%;
+}
+
+.edu-descr ul {
+  margin-left: 10%;
 }
 
 /* Footer */
+footer {
+  clear: both;
+}
+
 footer p {
   text-align: center;
   font-size: 0.8em;
@@ -59,6 +93,10 @@ footer a {
   display: none;
 }
 
+.edu-img {
+  display: none;
+}
+
 /* tablet media query */
 @media screen and (min-width: 600px), print {
   .mobile {
@@ -68,17 +106,47 @@ footer a {
   .tab-desk {
     display: block;
   }
+
+  article {
+    clear: both;
+  }
+
+  .edu-img {
+    display: inline-block;
+    float: left;
+    width: 20%;
+
+  }
+
+  .edu-descr {
+    display: inline-block;
+    float: right;
+    width: 70%;
+    margin-left: 2%;
+  }
 }
 
 /* desktop media query */
 @media screen and (min-width: 1000px), print {
+  #container {
+    width: 1000px;
+    margin: 0 auto;
+  }
 
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .brief {
+    grid-column: 1 / span 3;
+  }
 }
 
 /* large desktop media query */
 @media screen and (min-width: 1651px) {
   #container {
-    width: 1650px;
+    width: 1100px;
     margin: 0 auto;
   }
 }
