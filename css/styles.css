@@ -35,6 +35,22 @@ header img {
   margin: 0 auto;
 }
 
+/* nav */
+nav {
+  padding: 1%;
+}
+
+nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav li a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+
 /* justify any text in this rule */
 .brief, .portfolio-article, .edu-descr {
   text-align: justify;
@@ -119,6 +135,10 @@ footer p {
 
   .tab-desk {
     display: block;
+  }
+
+  nav li {
+    display: inline-block;
   }
 
   article {
