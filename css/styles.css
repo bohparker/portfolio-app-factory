@@ -5,7 +5,7 @@ file: styles.css
 */
 
 /* CSS RESET */
-body, header, nav, main, footer, a, div, h1, h3, p, img, ul, figure, figcaption, section, article, aside {
+body, header, nav, main, footer, a, div, h1, h3, h4, p, img, ul, figure, figcaption, section, article, aside {
   margin: 0;
   padding: 0;
   border: 0;
@@ -78,6 +78,10 @@ article img {
   margin: 0 auto;
 }
 
+h4 {
+  margin-top: 2%;
+}
+
 /* Portfolio Page */
 
 
@@ -114,17 +118,42 @@ footer p {
   display: block;
 }
 
-.tab-desk {
+.desk {
   display: none;
+}
+
+.mobile-tab {
+  display: block;
 }
 
 .edu-img {
   display: none;
 }
 
+.edu-descr table {
+  border-collapse: collapse;
+  width: 250px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  margin-top: 2%;
+}
+
+.edu-descr th, td {
+  border: 1px solid #000;
+  padding: 1%;
+}
+
 /* tablet media query */
 @media screen and (min-width: 600px), print {
   .mobile {
+    display: none;
+  }
+
+  .mobile-tab {
+    display: block;
+  }
+
+  .desk {
     display: none;
   }
 
@@ -143,6 +172,10 @@ footer p {
 
   article {
     clear: both;
+  }
+
+  .edu-descr table {
+    margin-left: 0;
   }
 
   /* make the edu-img inline with the edu-descr */
@@ -167,6 +200,14 @@ footer p {
 
 /* desktop media query */
 @media screen and (min-width: 1000px), print {
+  .desk {
+    display: block;
+  }
+
+  .mobile-tab {
+    display: none;
+  }
+
   #container {
     width: 1000px;
     margin: 0 auto;
