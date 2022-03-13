@@ -118,6 +118,10 @@ footer p {
   display: block;
 }
 
+.tab-desk {
+  display: none;
+}
+
 .desk {
   display: none;
 }
