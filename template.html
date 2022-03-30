@@ -24,12 +24,25 @@
     <header>
 
       <!-- Mobile Header -->
-      <a href="index.html" class="mobile"><img src="images/mobile-banner.png" alt="bhp mobile banner"></a>
+      <a href="index.html" class="mobile mobile-header"><img src="images/mobile-banner.png" alt="bhp mobile banner"></a>
 
       <!-- Desktop Header -->
       <a href="index.html" class="tab-desk"><img src="images/banner.png" alt="bhp banner"></a>
 
     </header>
+
+          <!-- nav button -->
+          <div class="nav-button mobile" onclick="menu()">
+            <h1>&#9776;</h1>
+          </div>
+
+          <!-- mobile nav links -->
+          <nav class="mobile" id="mobile-nav">
+            <a href="index.html">About Me</a>
+            <a href="education.html">Education</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+          </nav>
 
     <!-- nav for tablet and desktop -->
     <nav class="tab-desk">
@@ -49,5 +62,6 @@
 
   </div>
 
+<script src="scripts/script.js"></script>
 </body>
 </html>
