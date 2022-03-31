@@ -1,3 +1,8 @@
+/*
+  Author: Bo Parker
+  Date: 03/30/2022
+*/
+
 // nav menu button function
 function menu() {
   var links = document.getElementById("mobile-nav");

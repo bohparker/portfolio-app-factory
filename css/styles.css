@@ -5,7 +5,7 @@ file: styles.css
 */
 
 /* CSS RESET */
-body, header, nav, main, .mobile-header, .nav-button, footer, a, div, h1, h3, h4, p, img, ul, figure, figcaption, section, article, aside {
+#container, body, header, nav, main, .mobile-header, .nav-button, #mobile-nav, footer, a, div, h1, h3, h4, p, img, ul, figure, figcaption, section, article, aside, .grid, .grid2 {
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,6 +19,8 @@ body, header, nav, main, .mobile-header, .nav-button, footer, a, div, h1, h3, h4
 /* Add default style rules for body and images */
 body {
   font-family: Verdana, Arial;
+  background-color: #393f4d;
+  color: #d4d4dc;
 }
 
 img {
@@ -29,6 +31,7 @@ img {
 /* Header style */
 header {
   top: 0;
+  width: 100%;
 }
 
 header img {
@@ -36,29 +39,32 @@ header img {
 }
 
 .mobile-header {
-  float: left;
-  display: inline;
-  width:90%;
+  display: block;
 }
 
 .nav-button {
-  float: right;
-  display: inline;
-  width: 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  font-size: 1.3em;
+}
+
+#mobile-nav {
+  background-color: #feda6a;
 }
 
 #mobile-nav a {
-  clear: both;
   display: block;
   text-align: center;
   text-decoration: none;
-  color: #000;
+  color: #393f4d;
   padding: 1%;
   font-size: 1.5em;
 }
 
 /* justify any text in this rule */
-.brief, .portfolio-article, .edu-descr {
+.brief, .portfolio-article, .education-article {
   text-align: justify;
   text-justify: inter-word;
 }
@@ -71,7 +77,8 @@ main {
 
 /* article rules */
 article {
-  padding: 4%;
+  padding: 5%;
+  clear: both;
 }
 
 article h1, h3 {
@@ -82,40 +89,26 @@ article img {
   margin: 0 auto;
 }
 
-h4 {
-  margin-top: 2%;
+article p {
+  margin-top: 1.1em;
 }
 
-/* Portfolio Page */
 
-
-/* Education Page */
-
-.brief {
-  margin: 0 auto;
-  padding: 4%;
-}
-
-.education-article {
-  margin: 0 auto;
-  padding: 4%;
-}
-
-.edu-descr ul {
-  margin-left: 10%;
-}
 
 /* Footer */
 footer {
   clear: both;
   padding: 4%;
+  background: linear-gradient(#1d1e22, #393f4d, #1d1e22);
 }
 
 footer p {
   text-align: center;
   font-size: 0.8em;
   padding: 0 1em;
+  color: #d4d4dc;
 }
+
 
 /* mobile class for mobile screens */
 .mobile {
@@ -142,17 +135,33 @@ footer p {
   display: none;
 }
 
+/* Portfolio Page */
+
+/* Education Page */
+
+.brief {
+  margin: 0 auto;
+}
+
+.education-article {
+  margin: 0 auto;
+}
+
+.edu-descr ul {
+  margin-left: 10%;
+}
+
 /* rules for table in education page */
 .edu-descr table {
   border-collapse: collapse;
   width: 250px;
   margin: 0 auto;
-  border: 1px solid #000;
+  border: 1px solid #fff;
   margin-top: 2%;
 }
 
 .edu-descr th, td {
-  border: 1px solid #000;
+  border: 1px solid #fff;
   padding: 1%;
 }
 
@@ -181,7 +190,8 @@ footer p {
 
   /* nav */
   nav {
-    padding: 1%;
+    background-color: #feda6a;
+    padding: 1.3em;
   }
 
   nav ul {
@@ -191,18 +201,20 @@ footer p {
 
   nav li {
     display: inline-block;
-    padding: 2%;
   }
 
   nav li a {
     display: block;
     text-decoration: none;
-    color: #000;
-    font-size: 1.5em;
+    font-weight: bold;
+    color: #393f4d;
+    padding: 0em 1.1em;
   }
 
-  article {
-    clear: both;
+  nav li a:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.3);
   }
 
   .edu-descr table {
@@ -215,6 +227,7 @@ footer p {
     display: inline-block;
     float: left;
     width: 20%;
+    margin-bottom: 10px;
   }
 
   .edu-descr {
@@ -244,6 +257,10 @@ footer p {
     margin: 0 auto;
   }
 
+  nav li {
+    font-size: 1.5em;
+  }
+
   .grid {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -261,19 +278,16 @@ footer p {
 
 /* center the images vertically since they are different heights */
   .edu-img {
-    display: block;
     clear: right;
     width: 100%;
     height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: grey;
   }
 
   .edu-img img {
     max-width: 140px;
-
   }
 
   .edu-descr {
@@ -281,6 +295,10 @@ footer p {
     clear: left;
     width: 100%;
     margin-top: 10px;
+  }
+
+  .education-article ul {
+    margin-bottom: 10px;
   }
 
   .list-head {
