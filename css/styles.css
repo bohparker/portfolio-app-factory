@@ -136,6 +136,16 @@ footer p {
 }
 
 /* Portfolio Page */
+.githublink {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  background-color: #feda6a;
+  color: #1d1e22;
+  padding: 2%;
+  margin-top: 2%;
+}
 
 /* Education Page */
 
@@ -303,6 +313,10 @@ footer p {
 
   .list-head {
     list-style-type: none;
+  }
+
+  .githublink:hover {
+    transform: scale(1.2);
   }
 }
 
