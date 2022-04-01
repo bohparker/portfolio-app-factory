@@ -98,6 +98,7 @@ article p {
 /* Footer */
 footer {
   clear: both;
+  margin-top: 20px;
   padding: 4%;
   background: linear-gradient(#1d1e22, #393f4d, #1d1e22);
 }
@@ -136,11 +137,12 @@ footer p {
 }
 
 /* Portfolio Page */
-.githublink {
+.githublink, .educationlink {
   display: block;
   width: 100%;
   text-decoration: none;
   text-align: center;
+  font-size: 1.1em;
   background-color: #feda6a;
   color: #1d1e22;
   padding: 2%;
@@ -159,6 +161,12 @@ footer p {
 
 .edu-descr ul {
   margin-left: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.edu-descr ul lh {
+  font-weight: bold;
 }
 
 /* rules for table in education page */
@@ -248,7 +256,7 @@ footer p {
   }
 
   .edu-descr h3 {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -307,15 +315,7 @@ footer p {
     margin-top: 10px;
   }
 
-  .education-article ul {
-    margin-bottom: 10px;
-  }
-
-  .list-head {
-    list-style-type: none;
-  }
-
-  .githublink:hover {
+  .githublink:hover, .educationlink:hover {
     transform: scale(1.2);
   }
 }
