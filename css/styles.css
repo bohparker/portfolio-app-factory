@@ -5,7 +5,7 @@ file: styles.css
 */
 
 /* CSS RESET */
-#container, body, header, nav, main, .mobile-header, .nav-button, #mobile-nav, footer, a, div, h1, h3, h4, p, img, ul, figure, figcaption, section, article, aside, .grid, .grid2 {
+#container, body, header, nav, main, .mobile-header, .nav-button, #mobile-nav, footer, a, div, h1, h3, h4, p, img, ul, figure, figcaption, section, article, aside, .grid, .grid2, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,9 +23,15 @@ body {
   color: #d4d4dc;
 }
 
-img {
+img, video {
   max-width: 100%;
   display: block;
+}
+
+
+video {
+  margin: 0 auto;
+  width: 75%;
 }
 
 /* Header style */
@@ -81,8 +87,12 @@ article {
   clear: both;
 }
 
-article h1, h3 {
+article h1, h3, h4 {
   text-align: center;
+}
+
+h4 {
+  margin-top: 20px;
 }
 
 article img {
@@ -136,6 +146,11 @@ footer p {
   display: none;
 }
 
+.map {
+  display: block;
+  margin: 40px auto;
+}
+
 /* Portfolio Page */
 .githublink, .educationlink {
   display: block;
@@ -181,6 +196,25 @@ footer p {
 .edu-descr th, td {
   border: 1px solid #fff;
   padding: 1%;
+}
+
+/* Contact Page */
+.phone-link {
+  text-decoration: none;
+  padding: 1%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #000;
+  background-color: #feda6a;
+}
+
+.email-link {
+  text-decoration: none;
+  color: #d4d4dc;
+}
+
+.email-link:hover {
+  color: #feda6a;
 }
 
 /* tablet media query */
@@ -239,6 +273,11 @@ footer p {
     margin-left: 0;
   }
 
+  .map {
+    width: 600px;
+    height: 400px;
+  }
+
   /* make the edu-img inline with the edu-descr */
 
   .edu-img {
@@ -275,6 +314,12 @@ footer p {
     margin: 0 auto;
   }
 
+  video {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
   nav li {
     font-size: 1.5em;
   }
@@ -292,6 +337,11 @@ footer p {
 
   .brief {
     grid-column: 1 / span 3;
+  }
+
+  .map {
+    width: 700px;
+    height: 500px;
   }
 
 /* center the images vertically since they are different heights */
