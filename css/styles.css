@@ -5,7 +5,7 @@ file: styles.css
 */
 
 /* CSS RESET */
-#container, body, header, nav, main, .mobile-header, .nav-button, #mobile-nav, footer, a, div, h1, h3, h4, p, img, ul, figure, figcaption, section, article, aside, .grid, .grid2, video {
+#container, body, header, nav, main, .mobile-header, .nav-button, #mobile-nav, footer, a, div, h1, h3, h4, h5, p, img, ul, figure, figcaption, section, article, aside, .grid, .grid2, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -32,6 +32,10 @@ img, video {
 video {
   margin: 0 auto;
   width: 75%;
+}
+
+h2 {
+  text-align: center;
 }
 
 /* Header style */
@@ -103,8 +107,6 @@ article p {
   margin-top: 1.1em;
 }
 
-
-
 /* Footer */
 footer {
   clear: both;
@@ -174,14 +176,14 @@ footer p {
   margin: 0 auto;
 }
 
+.edu-descr h5 {
+  margin-top: 20px;
+}
+
 .edu-descr ul {
   margin-left: 10%;
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.edu-descr ul lh {
-  font-weight: bold;
 }
 
 /* rules for table in education page */
