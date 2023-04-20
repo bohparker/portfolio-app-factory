@@ -1,0 +1,384 @@
+/*
+Author: Bo Hendrix Parker
+Date: 03/09/2022
+file: styles.css
+*/
+
+/* CSS RESET */
+#container, body, header, nav, main, .mobile-header, .nav-button, #mobile-nav, footer, a, div, h1, h3, h4, h5, p, img, ul, figure, figcaption, section, article, aside, .grid, .grid2, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Add box-sizing border-box to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Add default style rules for body and images */
+body {
+  font-family: Verdana, Arial;
+  background-color: #393f4d;
+  color: #d4d4dc;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+
+video {
+  margin: 0 auto;
+  width: 75%;
+}
+
+h2 {
+  text-align: center;
+}
+
+/* Header style */
+header {
+  top: 0;
+  width: 100%;
+}
+
+header img {
+  margin: 0 auto;
+}
+
+.mobile-header {
+  display: block;
+}
+
+.nav-button {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #000;
+  font-size: 1.5em;
+}
+
+#mobile-nav {
+  background-color: #feda6a;
+}
+
+#mobile-nav a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #393f4d;
+  padding: 1%;
+  font-size: 1.5em;
+}
+
+/* justify any text in this rule */
+.brief, .portfolio-article, .education-article {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* main */
+main {
+  padding: 2%;
+  font-size: 1.1em
+}
+
+/* article rules */
+article {
+  padding: 5%;
+  clear: both;
+}
+
+article h1, h3, h4 {
+  text-align: center;
+}
+
+h4 {
+  margin-top: 20px;
+}
+
+article img {
+  margin: 0 auto;
+}
+
+article p {
+  margin-top: 1.1em;
+}
+
+/* Footer */
+footer {
+  clear: both;
+  margin-top: 20px;
+  padding: 4%;
+  background: linear-gradient(#1d1e22, #393f4d, #1d1e22);
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.8em;
+  padding: 0 1em;
+  color: #d4d4dc;
+}
+
+
+/* mobile class for mobile screens */
+.mobile {
+  display: block;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+.tab-desk {
+  display: none;
+}
+
+.desk {
+  display: none;
+}
+
+.mobile-tab {
+  display: block;
+}
+
+.edu-img {
+  display: none;
+}
+
+.map {
+  display: block;
+  margin: 40px auto;
+}
+
+/* Portfolio Page */
+.githublink, .educationlink {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1em;
+  background-color: #feda6a;
+  color: #1d1e22;
+  padding: 2%;
+  margin-top: 2%;
+}
+
+/* Education Page */
+
+.brief {
+  margin: 0 auto;
+}
+
+.education-article {
+  margin: 0 auto;
+}
+
+.edu-descr h5 {
+  margin-top: 20px;
+}
+
+.edu-descr ul {
+  margin-left: 10%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* rules for table in education page */
+.edu-descr table {
+  border-collapse: collapse;
+  width: 250px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  margin-top: 2%;
+}
+
+.edu-descr th, td {
+  border: 1px solid #fff;
+  padding: 1%;
+}
+
+/* Contact Page */
+.email-link:hover {
+  color: #feda6a;
+}
+
+/* tablet media query */
+@media screen and (min-width: 600px), print {
+  .mobile, #mobile-nav a {
+    display: none;
+  }
+
+  .mobile-tab {
+    display: block;
+  }
+
+  .tab-desk {
+    display: block;
+  }
+
+  .desk {
+    display: none;
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  /* nav */
+  nav {
+    background-color: #feda6a;
+    padding: 1.3em;
+  }
+
+  nav ul {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+  nav li a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: #393f4d;
+    padding: 0em 1.1em;
+  }
+
+  nav li a:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.3);
+  }
+
+  .edu-descr table {
+    margin-left: 0;
+  }
+
+  .map {
+    width: 600px;
+    height: 400px;
+  }
+
+  /* make the edu-img inline with the edu-descr */
+
+  .edu-img {
+    display: inline-block;
+    float: left;
+    width: 20%;
+    margin-bottom: 10px;
+  }
+
+  .edu-descr {
+    display: inline-block;
+    float: right;
+    width: 70%;
+    margin-left: 2%;
+  }
+
+  .edu-descr h3 {
+    text-align: center;
+  }
+}
+
+/* desktop media query */
+@media screen and (min-width: 1000px), print {
+  .desk {
+    display: block;
+  }
+
+  .mobile-tab {
+    display: none;
+  }
+
+  #container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  video {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+
+  nav li {
+    font-size: 1.5em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 2%;
+  }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .brief {
+    grid-column: 1 / span 3;
+  }
+
+  .map {
+    width: 700px;
+    height: 500px;
+  }
+
+/* center the images vertically since they are different heights */
+  .edu-img {
+    clear: right;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .edu-img img {
+    max-width: 140px;
+  }
+
+  .edu-descr {
+    display: block;
+    clear: left;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .githublink:hover, .educationlink:hover {
+    transform: scale(1.2);
+  }
+}
+
+/* large desktop media query */
+@media screen and (min-width: 1651px) {
+  #container {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+  .edu-img {
+    height: 370px;
+  }
+
+  .edu-descr img {
+    max-width: 155px;
+  }
+}
+
+/* print media query */
+@media print {
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+}
