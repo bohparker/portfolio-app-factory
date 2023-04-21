@@ -22,26 +22,27 @@
     <header>
 
       <!-- Mobile Header -->
-      <a href="{{url_for('index')}}" class="mobile mobile-header"><img src="{{url_for('static', filename='images/mobile-banner.png')}}" alt="bhp mobile banner"></a>
+      <img src="{{url_for('static', filename='images/mobile-banner.png')}}" class="mobile-header mobile" alt="bhp mobile banner">
 
       <!-- Desktop Header -->
-      <a href="{{url_for('index')}}" class="tab-desk"><img src="{{url_for('static', filename='images/banner.png')}}" alt="bhp banner"></a>
-
-      <!-- nav button -->
-      <div class="nav-button mobile" onclick="menu()">
-        <h1>&#9776;</h1>
-      </div>
+      <img src="{{url_for('static', filename='images/banner.png')}}" class="tab-desk" alt="bhp banner">
 
     </header>
 
     <!-- mobile nav links -->
-    <nav class="mobile" id="mobile-nav">
-      <a href="{{url_for('index')}}">About Me</a>
-      <a href="{{url_for('education')}}">Education</a>
-      <a href="{{url_for('portfolio')}}">Portfolio</a>
-      <a href="{{url_for('contact')}}">Contact</a>
+    <nav class="mobile-nav">
+      <div id="menu-links">
+        <a href="{{url_for('index')}}">About Me</a>
+        <a href="{{url_for('education')}}">Education</a>
+        <a href="{{url_for('portfolio')}}">Portfolio</a>
+        <a href="{{url_for('contact')}}">Contact</a>
+      </div>
+      <!-- nav button -->
+      <a class="nav-button" onclick="menu()">
+        <div id="accordian">&#9776;</div>
+      </a>
     </nav>
-
+    
     <!-- nav for tablet and desktop -->
     <nav class="tab-desk">
       <ul>
