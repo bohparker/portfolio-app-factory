@@ -1,81 +1,95 @@
 {% extends 'base.html' %}
 {% block content %}
-<!-- main -->
-    <main class="grid">
-
-      <!-- Brief paragraph about my education -->
+    <main>
+      <h1>Education</h1>
       <article class="brief">
-          <h1>Education Brief</h1>
-          <p>I am enrolled in the Computer Programming and Analysis Associate's Degree Program at PHSC. I am a little more than halfway done the coursework for my degree. I am a member of the Phi Theta Kappa Honor Society. </p>
+          
+          <h3>Computer Programming and Analysis, Associate in Science</h3>
+          <h4>GPA: 4.0 | Pasco Hernando State College</h4>
+          <hr>
+          <h4>Currently studying for Bachelor of Applied Science in Cybersecurity</h4>
+          <br>
+          <br>
       </article>
 
-      <!-- each article describes a type of education or credential -->
-      <article class="education-article">
-        <section class="edu-img"><img src="{{url_for('static', filename='images/phsc-logo.png')}}" alt="phsc logo"></section>
-        <section class="edu-descr">
-          <h3>College: PHSC</h3>
-          <a class="educationlink" href="https://phsc.edu" target="_blank">Visit PHSC</a>
-          <p>Major: Computer Programming and Analysis</p>
-          <!-- table for mobile and tablet layouts -->
-          <table class="mobile-tab">
-            <tr>
-              <th>Completed Classes</th>
-              <th>Future Classes</th>
-            </tr>
-            <tr>
-              <td>Networking</td>
-              <td>SQL</td>
-            </tr>
-            <tr>
-              <td>A+</td>
-              <td>C#</td>
-            </tr>
-            <tr>
-              <td>Web Design</td>
-              <td>C++</td>
-            </tr>
-            <tr>
-              <td>Python</td>
-              <td>Java</td>
-            </tr>
-          </table>
-          <!-- list for large screens -->
-          <div class="desk">
-            <h5>Completed Classes</h5>
-            <ul>
-              <li>Networking</li>
-              <li>A+</li>
-              <li>Web Design</li>
-              <li>Python</li>
-            </ul>
-            <h5>Future Classes</h5>
-            <ul>
-              <li>SQL</li>
-              <li>C#</li>
-              <li>C++</li>
-              <li>Java</li>
-            </ul>
-          </div>
-        </section>
-      </article>
+      <h3>Certifications and Badges</h3>
 
-        <article class="education-article">
-          <section class="edu-img"><img src="{{url_for('static', filename='images/network-logo.png')}}" alt="network cert"></section>
-          <section class="edu-descr">
-            <h3>CompTIA Network+</h3>
-            <a class="educationlink" href="https://www.credly.com/badges/f42bc25b-c176-4626-93d9-f85d73eba9d8" target="_blank">View my Certification</a>
-            <p>In December of 2021, I received my CompTIA Network+ Certification. It is widely used certification in the IT industry.</p>
-          </section>
+      <div class="certs-grid">
+
+        <article class="cert">
+          <a href="https://www.credly.com/badges/fdabf6f0-5e63-45f3-b5cb-c966c6a7de41" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/a+.png')}}" alt="">
+          </a>
         </article>
 
-        <article class="education-article">
-          <section class="edu-img"><img src="{{url_for('static', filename='images/ptk-logo.png')}}" alt="ptk logo"></section>
-          <section class="edu-descr">
-            <h3>Phi Theta Kappa</h3>
-            <a class="educationlink" href="https://www.ptk.org" target="_blank">Visit PTK</a>
-            <p>I am a member of the Phi Theta Kappa Honor Society. Phi Theta Kappa is a society for students in a 2 year university. It provides scholarships and job opporunties to those transfereing to a four year college.</p>
-          </section>
+        <article class="cert">
+          <a href="https://www.credly.com/badges/f42bc25b-c176-4626-93d9-f85d73eba9d8" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/network.png')}}" alt="">
+          </a>
         </article>
 
+        <article class="cert">
+          <a href="https://www.credly.com/badges/abc2a39d-63ed-47b2-b30f-2f5f29fe8193" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/it.png')}}" alt="">
+          </a>
+        </article>
+
+        <article class="cert">
+          <a href="https://www.credly.com/badges/21844e0f-3b62-4583-9344-c75490fd047b" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/project.png')}}" alt="">
+            <div class="cred-name"></div>
+          </a>
+        </article>
+
+        <article class="cert">
+          <a href="https://www.credly.com/badges/56d05f9c-fbdc-40bc-ba14-94d6185e7585" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/python.png')}}" alt="">
+            <div class="cred-name"></div>
+          </a>
+        </article>
+
+        <article class="cert">
+          <a href="https://www.credly.com/badges/854b951c-ec67-4d8f-b88b-a48819be12d1" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/sql.png')}}" alt="">
+            <div class="cred-name"></div>
+          </a>
+        </article>
+
+        <article class="cert">
+          <a href="https://www.credly.com/badges/c58ae683-d863-428c-bab1-3439641174a3" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/html.png')}}" alt="">
+            <div class="cred-name"></div>
+          </a>
+        </article>
+
+        <article class="cert">
+          <a href="https://www.credly.com/badges/7e3bc6f9-be85-43f5-8184-23f0b4221e85" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/c#.png')}}" alt="">
+            <div class="cred-name"></div>
+          </a>
+        </article>
+
+        <article class="cert">
+          <a href="https://www.credly.com/badges/b6116274-72b2-42a8-9eae-ffc1292f7e02" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/javascript.png')}}" alt="">
+            <div class="cred-name"></div>
+          </a>
+        </article>
+
+        <article class="cert">
+          <a href="https://www.credly.com/badges/a3155969-03f6-4b4e-8046-263d61c2a321" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/java.png')}}" alt="">
+            <div class="cred-name"></div>
+          </a>
+        </article>
+
+        <article class="cert">
+          <a href="https://www.credly.com/badges/b6aba316-986e-42e4-9cab-8b5e344a7991" target="_blank">
+            <img src="{{url_for('static', filename='images/certs/fullstack.png')}}" alt="">
+            <div class="cred-name"></div>
+          </a>
+        </article>
+
+      </div>
     </main>
 {% endblock %}

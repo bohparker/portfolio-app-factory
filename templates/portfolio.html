@@ -1,11 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
-    <main class="grid2">
+    <main>
+      <h1>Portfolio</h1>
+      <div class="grid2">
+      <article class="portfolio-article">
+        <h3>Nuze</h3>
+        <a class="githublink" href="https://github.com/bohparker/nuze" target="_blank">View on Github</a>
+        <p>
+          A Flask News/Blogging site. It has full database and authentication functionality.
+          Users can create an account, can be assigned roles and permissions, and write articles using
+          CKEditor.
+        </p>
+      </article>
 
       <article class="portfolio-article">
         <h3>Portfolio</h3>
         <a class="githublink" href="https://github.com/bohparker/portfolio" target="_blank">View on Github</a>
-        <p>This project is the site you are on right now! It was created as a final project for a Web Design course. You can view the code on Github.</p>
+        <p>This is the site you are on right now. It started off as a static site 
+          for a final project in a web design course. It has been turned into a Flask site that uses Flask-Mail
+          and WTForms.
+        </p>
+      </article>
+
+      <article class="portfolio-article">
+        <h3>Alekna Contracting</h3>
+        <a class="githublink" href="https://github.com/bohparker/alekna-contracting-site" target="_blank">View on Github</a>
+        <p>
+          A site made for a friend's personal contracing business. It is a simple Flask app. This was first made 
+          as a static site before it was made into a Flask app.
+        </p>
       </article>
 
       <article class="portfolio-article">
@@ -26,17 +49,6 @@
         <p>This is a website from a Web Design course's textbook. The main course material centered around creating this site. The major fundamentals of Web Design were covered while making this project. It is a website for a fictitious gym.</p>
       </article>
 
-      <article class="portfolio-article">
-        <h3>Favicon Generator</h3>
-        <a class="githublink" href="https://github.com/bohparker/fav-generator" target="_blank">View on Github</a>
-        <p>This is a python program that generates the link tags for favicons in an html file's header. It generates four link tags; shortcut, icon, apple icon, and android icon. The user is prompted for each favicon's path and image name. An html file is generated that contains the link tags.</p>
-      </article>
-
-      <article class="portfolio-article">
-        <h3>List Generator</h3>
-        <a class="githublink" href="https://github.com/bohparker/list-generator" target="_blank">View on Github</a>
-        <p>This is a python program that creates a list in an html file. It asks the user to make an ordered or and unordered list, then asks for list items. The user can type a specific phrase to stop entering list items. A file is created that contains the HTML code for the list including the opening and closing tags.</p>
-      </article>
-
+    </div>
     </main>
 {% endblock %}
