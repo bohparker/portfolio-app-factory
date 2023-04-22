@@ -53,8 +53,13 @@ def contact():
         message = form.message.data
 
         send_email(os.environ['DEFAULT_MAIL_SENDER'], subject, 'email/contact', contact=contact, message=message)
+        flash('Message has been sent!', 'success')
         return redirect('contact')
     
+    if form.errors:
+        for error, message in form.errors.items():
+            flash(message[0], 'warning')
+            return render_template('contact.html', form=form)
 
     return render_template('contact.html', form=form)
 

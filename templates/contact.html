@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
     <main>
+      <h2 id="contact-descr">
+        Send me a message if you would like any info and 
+        I will get back to you ASAP!
+      </h2>
       <form id="contact" novalidate
         method="POST"
         action="{{url_for('contact')}}">
@@ -16,9 +20,10 @@
           {{ form.submit() }}
         </div>
       </fieldset>
-
       </form>
-
+      <br>
+      <hr>
+      <h3>I am located in Spring Hill, Florida.</h3>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112219.47584107092!2d-82.61923864271328!3d28.483804105204438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c29e37215440a1%3A0x96d839eb30e182b8!2sSpring%20Hill%2C%20FL!5e0!3m2!1sen!2sus!4v1650754651040!5m2!1sen!2sus" allowfullscreen="" loading="lazy" class="map"></iframe>
 
     </main>

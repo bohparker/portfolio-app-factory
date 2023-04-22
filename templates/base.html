@@ -53,6 +53,15 @@
       </ul>
     </nav>
 
+    <div>
+      {% for category, message in get_flashed_messages
+        (with_categories=true) %}
+        <div class="flash-message {{category}}">
+          {{message}}
+        </div>
+      {% endfor %}
+    </div>
+
     {% block content %}{% endblock %}
 
     <footer>
