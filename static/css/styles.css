@@ -17,6 +17,7 @@ file: styles.css
 
 #menu-links a {
   margin: 0;
+  border-bottom: 1px solid #393f4d;
 }
 
 /* Add box-sizing border-box to all elements */
@@ -28,7 +29,7 @@ file: styles.css
 body {
   font-family: Verdana, Arial;
   background-color: #393f4d;
-  color: #d4d4dc;
+  color:#fff;
 }
 
 img, video {
@@ -78,11 +79,11 @@ header img {
   text-decoration: none;
   color: #393f4d;
   padding: 1%;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 #accordian {
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 /* justify any text in this rule */
@@ -124,7 +125,7 @@ footer {
   clear: both;
   margin-top: 20px;
   padding: 4%;
-  background: linear-gradient(#1d1e22, #393f4d, #1d1e22);
+  background-color: #393f4d;
 }
 
 footer p {
@@ -171,6 +172,7 @@ footer p {
   color: #1d1e22;
   padding: 2%;
   margin-top: 2%;
+  border-radius: 10px;
 }
 
 /* Education Page */
@@ -212,17 +214,45 @@ footer p {
   color: #feda6a;
 }
 
+#contact {
+  margin: auto;
+  width: 75%;
+}
+
+#form-grid label {
+  display: block;
+}
+
+#form-grid textarea {
+  resize: none;
+  height: 100px;
+}
+
+#form-grid input, textarea {
+  width: 100%;
+  display: block;
+  margin: 3px 0;
+  padding: 12px 10px;
+  border-radius: 4px;
+  float: left;
+}
+
+input[type=submit] {
+  font-size: 1.2em;
+  background-color: #feda6a;
+}
+
 @media screen and (min-width: 300px),
 print {
   #accordian {
-    font-size: 1.7em;
+    font-size: 2.5em;
   }
 }
 
 @media screen and (min-width: 370px),
 print {
   #accordian {
-    font-size: 2em;
+    font-size: 2.8em;
   }
 }
 
@@ -253,6 +283,8 @@ print {
   nav {
     background-color: #feda6a;
     padding: 1.3em;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
   nav ul {
@@ -273,9 +305,10 @@ print {
   }
 
   nav li a:hover {
-    background-color: #000;
+    background-color: #393f4d;
     color: #fff;
     transform: scale(1.3);
+    border-radius: 10px;
   }
 
   .edu-descr table {
@@ -303,6 +336,16 @@ print {
 
   .edu-descr h3 {
     text-align: center;
+  }
+
+  .githublink:hover, .educationlink:hover {
+    transform: scale(1.1);
+  }
+
+  input[type=submit]:hover {
+    background-color: #393f4d;
+    cursor: pointer;
+    color:#feda6a;
   }
 }
 
@@ -370,10 +413,6 @@ print {
     clear: left;
     width: 100%;
     margin-top: 10px;
-  }
-
-  .githublink:hover, .educationlink:hover {
-    transform: scale(1.2);
   }
 }
 
