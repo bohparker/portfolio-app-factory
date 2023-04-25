@@ -242,12 +242,24 @@ footer p {
   display: grid;
   grid-template-columns: auto;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .cert {
   margin: auto;
   border-radius: 4px;
   max-width: 90%;
+}
+
+.udemy-grid {
+  grid-template-columns: auto;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.udemy-grid img {
+  max-width: 90%;
+  margin: auto;
 }
 
 /* Portfolio Page */
