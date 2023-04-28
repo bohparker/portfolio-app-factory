@@ -263,6 +263,10 @@ footer p {
 }
 
 /* Portfolio Page */
+.portfolio-article {
+  width: 100%;
+}
+
 .githublink {
   display: block;
   width: 100%;
