@@ -290,21 +290,21 @@ footer p {
   color: #feda6a;
 }
 
-#contact {
+.form {
   margin: auto;
   width: 75%;
 }
 
-#form-grid label {
+.form-grid label {
   display: block;
 }
 
-#form-grid textarea {
+.form-grid textarea {
   resize: none;
   height: 100px;
 }
 
-#form-grid input, textarea {
+.form-grid input, textarea {
   width: 100%;
   display: block;
   margin: 3px 0;

@@ -5,11 +5,11 @@
         Send me a message if you would like any info and 
         I will get back to you ASAP!
       </h2>
-      <form id="contact" novalidate
+      <form class="form" novalidate
         method="POST"
         action="{{url_for('frontend_blueprint.contact')}}">
         <fieldset><legend>Contact Form</legend>
-        <div id="form-grid">
+        <div class="form-grid">
           {{ form.csrf_token }}
           {{ form.contact.label }}
           {{ form.contact() }}

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="POST"
+        action="{{url_for('admin_blueprint.login')}}">
+        <fieldset><legend>Login</legend>
+            <div class="form-grid">
+                {{form.csrf_token}}
+                {{form.username.label}}
+                {{form.username()}}
+                {{form.password.label}}
+                {{form.password()}}
+                {{form.submit()}}
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}
