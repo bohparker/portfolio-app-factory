@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <form method="POST"
+        action="{{url_for('admin_blueprint.admin_page')}}">
+        <fieldset><legend>Portfolio Project</legend>
+            <div class="form-grid">
+                {{form1.csrf_token}}
+                {{form1.name.label}}
+                {{form1.name()}}
+                {{form1.link.label}}
+                {{form1.link()}}
+                {{form1.description.label}}
+                {{form1.description()}}
+                {{form1.submit()}}
+            </div>
+        </fieldset>
+    </form>
+
+{% endblock %}

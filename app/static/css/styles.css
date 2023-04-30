@@ -263,10 +263,6 @@ footer p {
 }
 
 /* Portfolio Page */
-.portfolio-article {
-  width: 100%;
-}
-
 .githublink {
   display: block;
   width: 100%;
@@ -277,6 +273,7 @@ footer p {
   color: #1d1e22;
   padding: 2%;
   margin-top: 2%;
+  margin-bottom: 2%;
   border-radius: 10px;
 }
 
@@ -356,7 +353,7 @@ print {
 
   .grid2 {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     
   }
 
@@ -457,7 +454,7 @@ print {
 
   .grid2 {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
  
   }
 

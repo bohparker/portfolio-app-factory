@@ -1,13 +1,26 @@
+import os
+from dotenv import load_dotenv
+from functools import wraps
+from psycopg2.pool import SimpleConnectionPool
 from contextlib import contextmanager
 
 from werkzeug.security import check_password_hash
 
-from .connection import get_connection
 
+load_dotenv()
 
-CHECK_LOGIN = "SELECT * FROM users WHERE username = (%s);"
-GET_USER = "SELECT * FROM users WHERE id = (%s);"
+database_uri = os.environ['DATABASE_URI']
 
+pool = SimpleConnectionPool(minconn=1, maxconn=2, dsn=database_uri)
+
+@contextmanager
+def get_connection():
+    connection = pool.getconn()
+
+    try:
+        yield connection
+    finally:
+        pool.putconn(connection)
 
 @contextmanager
 def get_cursor(connection):
@@ -38,6 +51,12 @@ class User:
     
     def __repr__(self):
         return f'<User "{self.username}">'
+    
+
+CHECK_LOGIN = "SELECT * FROM users WHERE username = (%s);"
+GET_USER = "SELECT * FROM users WHERE id = (%s);"
+GET_PROJECTS = "SELECT name, link, description FROM portfolio;"
+INSERT_PROJECT = "INSERT INTO portfolio (name,link,description) VALUES (%s,%s,%s);"
 
 
 def get_user_object(id):
@@ -56,3 +75,17 @@ def validate_user(username, password):
             user = cursor.fetchone()
             if user and check_password_hash(user[2],password):
                 return user[0]
+            
+
+def all_projects():
+    with get_connection() as connection:
+        with get_cursor(connection) as cursor:
+            cursor.execute(GET_PROJECTS)
+            projects = cursor.fetchall()
+            return projects
+            
+
+def create_project(name, link, description):
+    with get_connection() as connection:
+        with get_cursor(connection) as cursor:
+            cursor.execute(INSERT_PROJECT,(name,link,description))

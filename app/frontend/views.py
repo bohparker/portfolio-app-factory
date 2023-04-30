@@ -3,6 +3,7 @@ from flask import render_template, request, redirect, flash
 
 from . import frontend_blueprint as blp
 
+from ..db.queries import all_projects
 from .forms import ContactForm
 from app import mail
 
@@ -16,7 +17,8 @@ def education():
 
 @blp.route('/portfolio')
 def portfolio():
-    return render_template('portfolio.html')
+    projects = all_projects()
+    return render_template('portfolio.html', projects=projects)
 
 @blp.route('/contact', methods=('GET','POST'))
 def contact():

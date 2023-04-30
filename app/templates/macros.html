@@ -1,0 +1,9 @@
+{% macro project_macro(name,link,description) %}
+
+    <article class="portfolio-article">
+        <a class="githublink" href="{{link}}" target="_blank">View on Github</a>
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+    </article>   
+
+{% endmacro %}
