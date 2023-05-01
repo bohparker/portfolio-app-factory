@@ -1,6 +1,5 @@
 import os
 from dotenv import load_dotenv
-from functools import wraps
 from psycopg2.pool import SimpleConnectionPool
 from contextlib import contextmanager
 
@@ -56,8 +55,9 @@ class User:
 CHECK_LOGIN = "SELECT * FROM users WHERE username = (%s);"
 GET_USER = "SELECT * FROM users WHERE id = (%s);"
 GET_PROJECTS = "SELECT name, link, description FROM portfolio;"
+GET_BADGES = "SELECT name, link, filename FROM badges;"
 INSERT_PROJECT = "INSERT INTO portfolio (name,link,description) VALUES (%s,%s,%s);"
-
+INSERT_BADGE = "INSERT INTO badges (name,link,filename) VALUES (%s,%s,%s);"
 
 def get_user_object(id):
     with get_connection() as connection:
@@ -85,7 +85,21 @@ def all_projects():
             return projects
             
 
+def all_badges():
+    with get_connection() as connection:
+        with get_cursor(connection) as cursor:
+            cursor.execute(GET_BADGES)
+            badges = cursor.fetchall()
+            return badges
+
+
 def create_project(name, link, description):
     with get_connection() as connection:
         with get_cursor(connection) as cursor:
             cursor.execute(INSERT_PROJECT,(name,link,description))
+
+    
+def save_img(name, link, filename):
+    with get_connection() as connection:
+        with get_cursor(connection) as cursor:
+            cursor.execute(INSERT_BADGE, (name, link, filename))

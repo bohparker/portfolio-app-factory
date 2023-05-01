@@ -19,7 +19,21 @@ def create_app():
 
     app.config['SECRET_KEY'] = os.environ['SECRET_KEY'] or 'none'
     app.config['WTF_CSRF_SECRET_KEY'] = os.environ['WTF_CSRF_SECRET_KEY'] or 'none'
+    
+    app.config['DATABASE_URI'] = os.environ['DATABASE_URI']
+    
+    app.config['MAIL_SERVER'] = os.environ['MAIL_SERVER']
+    app.config['MAIL_PORT'] = os.environ['MAIL_PORT']
+    app.config['MAIL_USERNAME'] = os.environ['MAIL_USERNAME']
+    app.config['MAIL_PASSWORD'] = os.environ['MAIL_PASSWORD']
+    app.config['DEFAULT_MAIL_SENDER'] = os.environ['DEFAULT_MAIL_SENDER']
+    app.config['MAIL_SUBJECT_PREFIX'] = os.environ['MAIL_SUBJECT_PREFIX']
+    app.config['MAIL_USE_TLS'] = False
+    app.config['MAIL_USE_SSL'] = True
 
+    basedir = os.path.abspath(os.path.dirname(__file__))
+    badges_folder = os.path.join(basedir, 'static/images/badges')
+    app.config['BADGES_FOLDER'] = badges_folder
 
     csrf.init_app(app)
     mail.init_app(app)

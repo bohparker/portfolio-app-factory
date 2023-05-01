@@ -14,6 +14,12 @@ CREATE_PORTFOLIO = """CREATE TABLE IF NOT EXISTS portfolio(
     link TEXT NOT NULL,
     description TEXT NOT NULL
 )"""
+CREATE_BADGES = """CREATE TABLE IF NOT EXISTS badges(
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    link TEXT NOT NULL,
+    filename TEXT NOT NULL
+)"""
 
 ADD_USER = "INSERT INTO users (username,pwdhash) values (%s,%s);"
 
@@ -27,4 +33,5 @@ with queries.get_connection() as connection:
     with queries.get_cursor(connection) as cursor:
         cursor.execute(CREATE_USERS)
         cursor.execute(CREATE_PORTFOLIO)
+        cursor.execute(CREATE_BADGES)
         cursor.execute(ADD_USER, (username,pwdhash))

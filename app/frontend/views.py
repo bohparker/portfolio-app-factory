@@ -3,9 +3,9 @@ from flask import render_template, request, redirect, flash
 
 from . import frontend_blueprint as blp
 
-from ..db.queries import all_projects
+from ..db.queries import all_projects, all_badges
 from .forms import ContactForm
-from app import mail
+from ..email_function import send_email
 
 @blp.route('/')
 def index():
@@ -13,7 +13,8 @@ def index():
 
 @blp.route('/education')
 def education():
-    return render_template('education.html')
+    badges = all_badges()
+    return render_template('education.html', badges=badges)
 
 @blp.route('/portfolio')
 def portfolio():
@@ -28,7 +29,7 @@ def contact():
         subject = form.subject.data
         message = form.message.data
 
-        mail.send_email(os.environ['DEFAULT_MAIL_SENDER'], subject, 'email/contact', contact=contact, message=message)
+        send_email(os.environ['DEFAULT_MAIL_SENDER'], subject, 'email/contact', contact=contact, message=message)
         flash('Message has been sent!', 'success')
         return redirect('contact')
     

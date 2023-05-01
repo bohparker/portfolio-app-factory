@@ -7,3 +7,13 @@
     </article>   
 
 {% endmacro %}
+
+{% macro badge_macro(name,link,filename) %}
+
+    <article class="cert">
+        <a href="{{link}}" target="_blank">
+            <img src="{{url_for('static', filename='images/badges/')}}{{filename}}" alt="{{name}}">
+        </a>
+    </article>
+
+{% endmacro %}

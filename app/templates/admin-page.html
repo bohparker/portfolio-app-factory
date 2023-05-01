@@ -17,4 +17,21 @@
         </fieldset>
     </form>
 
+    <form method="POST"
+        enctype="multipart/form-data"
+        action="{{url_for('admin_blueprint.admin_page')}}">
+        <fieldset><legend>Credly Badge</legend>
+            <div class="form-grid">
+                {{form2.csrf_token}}
+                {{form2.name.label}}
+                {{form2.name()}}
+                {{form2.link.label}}
+                {{form2.link()}}
+                {{form2.image.label}}
+                {{form2.image()}}
+                {{form2.submit()}}
+            </div>
+        </fieldset>
+    </form>
+
 {% endblock %}

@@ -1,3 +1,4 @@
+{% from 'macros.html' import badge_macro with context %}
 {% extends 'base.html' %}
 {% block content %}
     <main>
@@ -16,80 +17,11 @@
 
       <div class="certs-grid">
 
-        <article class="cert">
-          <a href="https://www.credly.com/badges/fdabf6f0-5e63-45f3-b5cb-c966c6a7de41" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/aplus.png')}}" alt="aplus">
-          </a>
-        </article>
+        {% for badge in badges %}
 
-        <article class="cert">
-          <a href="https://www.credly.com/badges/f42bc25b-c176-4626-93d9-f85d73eba9d8" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/network.png')}}" alt="networkplus">
-          </a>
-        </article>
+          {{ badge_macro(badge[0],badge[1],badge[2]) }}
 
-        <article class="cert">
-          <a href="https://www.credly.com/badges/abc2a39d-63ed-47b2-b30f-2f5f29fe8193" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/it.png')}}" alt="it">
-          </a>
-        </article>
-
-        <article class="cert">
-          <a href="https://www.credly.com/badges/21844e0f-3b62-4583-9344-c75490fd047b" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/project.png')}}" alt="projectplus">
-            <div class="cred-name"></div>
-          </a>
-        </article>
-
-        <article class="cert">
-          <a href="https://www.credly.com/badges/56d05f9c-fbdc-40bc-ba14-94d6185e7585" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/python.png')}}" alt="python">
-            <div class="cred-name"></div>
-          </a>
-        </article>
-
-        <article class="cert">
-          <a href="https://www.credly.com/badges/854b951c-ec67-4d8f-b88b-a48819be12d1" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/sql.png')}}" alt="sql">
-            <div class="cred-name"></div>
-          </a>
-        </article>
-
-        <article class="cert">
-          <a href="https://www.credly.com/badges/c58ae683-d863-428c-bab1-3439641174a3" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/html.png')}}" alt="html">
-            <div class="cred-name"></div>
-          </a>
-        </article>
-
-        <article class="cert">
-          <a href="https://www.credly.com/badges/7e3bc6f9-be85-43f5-8184-23f0b4221e85" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/csharp.png')}}" alt="csharp">
-            <div class="cred-name"></div>
-          </a>
-        </article>
-
-        <article class="cert">
-          <a href="https://www.credly.com/badges/b6116274-72b2-42a8-9eae-ffc1292f7e02" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/javascript.png')}}" alt="javascript">
-            <div class="cred-name"></div>
-          </a>
-        </article>
-
-        <article class="cert">
-          <a href="https://www.credly.com/badges/a3155969-03f6-4b4e-8046-263d61c2a321" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/java.png')}}" alt="java">
-            <div class="cred-name"></div>
-          </a>
-        </article>
-
-        <article class="cert">
-          <a href="https://www.credly.com/badges/b6aba316-986e-42e4-9cab-8b5e344a7991" target="_blank">
-            <img src="{{url_for('static', filename='images/certs/fullstack.png')}}" alt="fullstack">
-            <div class="cred-name"></div>
-          </a>
-        </article>
-
+        {% endfor %}
       </div>
 
       <h3>Udemy Certificates</h3>
